@@ -4,7 +4,7 @@ Este é um projeto realizado em sala de aula da matéria de programação 2 do d
   
 ## Resumo da Ópera
 
-A ideia do projeto é desenvolver um jogo de multiplas escolhas no qual o jogador irá construir um robô para derrotar os "chefões", e a depender de suas escolhas, finais alternativos são esperados, cada escolha tem seu peso e pode ser decisivo.
+A ideia do projeto é desenvolver um jogo de multiplas escolhas no qual o jogador irá construir um robô para derrotar os "chefões", e a depender de suas escolhas, finais alternativos são esperados, cada escolha tem seu peso e pode ser decisivo. O código se encontra ainda nos estágios iniciais, porém é de se esperar uma interação gráfica em próximas atualizações!
 
 ## História
 
