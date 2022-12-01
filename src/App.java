@@ -124,10 +124,30 @@ public class App {
             Thread.sleep(1500);
             slowPrint("\nO seu robozinho não é um robô comum, ele é um robô de guerra, os seus atributos serão definidos de acordo com as suas escolhas.");
             Thread.sleep(1500);
+
+
+
+
+
+            //PAREI AQUI (CRIAR FUNÇÃO QUE RETORNA OS TRIBUTOS ATUALIZADOS TODA VEZ Q A FUNÇÃO FOR CHAMADA)
+            //TRAZER UM SEGUNDO FINAL GAME OVER PARA POSTAR A ATIVIDADE
+
+
+            // REFAZER AQUI UMA FUNÇÃO PARA TRAZER OS TRIBUTOS ATUALIZADOS 
             slowPrint("\nAtualmente os seus tributos estão classificados como:\n[Nome:"+robo1.nome+"] / [Vida: "+robo1.vida+"] / [Defesa: "+robo1.defesa+"] / [Ataque: "+robo1.ataque+"] / [XP: "+robo1.xp+"] / [Nivel: "+robo1.nivel+"]");
             Thread.sleep(1500);
+
+            // ADICIONAR OPÇÃO PALHA =  GAME OVER PARA A ATIVIDADE DE P2
             slowPrint("\nQual dos seguintes materiais será o material base do seu robo?\n[Aço] / [Ouro] / [Cobre] / [Plástico]");
             
+
+
+
+
+
+
+
+
             //recebe a resposta do usuário sobre o tipo do robo
             String tipoRobo = input.nextLine();
             while(!tipoRobo.equalsIgnoreCase("Aço") && !tipoRobo.equalsIgnoreCase("Ouro") && !tipoRobo.equalsIgnoreCase("Cobre") && !tipoRobo.equalsIgnoreCase("Plástico")){
