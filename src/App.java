@@ -104,18 +104,39 @@ public class App {
             slowPrint("\n\nSeja bem vindo ao menu interativo! Eu irei auxiliar na construção do seu robo guerrilheiro, escolha as peças com sabedoria ou encare a derrota iminente.");
             slowPrint("\nQual é o seu nome e o do seu robozinho? \"ps: separe os nomes atraves de uma vírgula\"");
             //use a ferramenta split para separar usando uma virgula , leia  a linha inteira usando nextLine e depois use o split
-            
+            //recebe o nome do usuário e o nome do robô
             String nomeInteiro = input.nextLine();
             String[] nomes = nomeInteiro.split(",");
+            // cria dois novos objetos referentes a cada nome recebido
             String nomeUser = nomes[0];
             String nomeRobo = nomes[1];
-            slowPrint("\nPrazer "+nomeUser+"! Seu robozinho se chamará "+nomeRobo+"!\n\nAgora vamos dar continuidade a construção!\nVocê deseja que ele seja feito de qual material?\n[Aço] / [Ouro] / [Cobre] / [Plástico]");
+
+            slowPrint("\nPrazer "+nomeUser+"! Seu robozinho se chamará "+nomeRobo+"!\n\nAgora vamos á construção!");
+            Thread.sleep(1500);
+            slowPrint("\nPorém antes de continuarmos devo lhe avisar de alguns detalhes importantes.");
+            Thread.sleep(1500);
+            slowPrint("\nO seu robozinho não é um robô comum, ele é um robô de guerra, os seus atributos serão definidos de acordo com as suas escolhas.");
+            Thread.sleep(1500);
+            slowPrint("\nQual dos seguintes materiais será o material base do seu robo?\n[Aço] / [Ouro] / [Cobre] / [Plástico]");
+            
+            //recebe a resposta do usuário sobre o tipo do robo
             String tipoRobo = input.nextLine();
             while(!tipoRobo.equalsIgnoreCase("Aço") && !tipoRobo.equalsIgnoreCase("Ouro") && !tipoRobo.equalsIgnoreCase("Cobre") && !tipoRobo.equalsIgnoreCase("Plástico")){
                 System.out.println("Você digitou algo errado, tente novamente!\nVocê deseja que ele seja feito de qual material?\n[Aço] / [Ouro] / [Cobre] / [Plástico]");
                 tipoRobo = input.nextLine();
             }
-
+            if (tipoRobo.equalsIgnoreCase("Aço")){
+                slowPrint("\nVocê escolheu o material Aço, ele é muito resistente e durável, mas é muito pesado, o que pode atrapalhar na mobilidade do seu robozinho.");
+            }
+            else if (tipoRobo.equalsIgnoreCase("Ouro")){
+                slowPrint("\nVocê escolheu o material Ouro, ele Não é tão resistente assim, mas deixa o seu robo lindo e brilhante, o que pode atrapalhar na mobilidade do seu robozinho.");
+            }
+            else if (tipoRobo.equalsIgnoreCase("Cobre")){
+                slowPrint("\nVocê escolheu o material Cobre, ele é muito resistente e durável, mas é muito pesado, o que pode atrapalhar na mobilidade do seu robozinho.");
+            }
+            else if (tipoRobo.equalsIgnoreCase("Plástico")){
+                slowPrint("\nVocê escolheu o material Plástico, ele é muito resistente e durável, mas é muito pesado, o que pode atrapalhar na mobilidade do seu robozinho.");
+            }
             
             
             //equals ignore case
