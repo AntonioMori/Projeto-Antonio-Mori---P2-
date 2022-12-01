@@ -42,16 +42,42 @@ public class App {
         Thread.sleep(2800);
         slowestPrint("Oláaaa humm...");
         Thread.sleep(2000);
-        slowPrint("\nqual é o seu nome?");
+        slowestPrint("\nQue estranho..");
+        Thread.sleep(2000);
+        slowestPrint("O meu sinal devia estar chegando para o exército e não para voc...");
+        Thread.sleep(1300);
+        slowestPrint("\nEnfim...");
+        Thread.sleep(1300);
+        slowestPrint(" qual é o seu nome?");
         Thread.sleep(2000);
         slowestPrint("\nBem esqueça isso, deixaremos os detalhes para depois...");
         Thread.sleep(1000);
         slowestPrint("agora apenas preste atenção nas instruções ok?");
         Thread.sleep(3000);
-        slowestPrint("\nAo chegar os comandos em seu sistema, inicie em modo de segurança ok? ISSO É DE EXTREMA IMPORTÂNCIA, minha vida depende disso...");
+        slowestPrint("\nAo chegar os comandos em seu sistema, inicie em modo de segurança ok?");
         Thread.sleep(1000);
-        slowPrint("eu devia soar mais desesperado mas por algum motivo os monstros parecem estar impedidos de entrar aqui, hmm, poxa espere ai.. você deve estar se perguntando o que está acontecendo, masss.. Meu DEUSS ELES ESTÃO ENTRANDO AQUI, NÃO TEMOS MAIS TEMPO!\nApenas obedeça esse sinal de socorro! POR FAVOR, MINHA VIDA ESTÁ EM SUAS MÃOS! NÃO PA###@(!$ .3´~<,12301101010000100000010001001000\n\n[ERROR] \n\n[end of transmition] \n\nDigite \"yes\" para iniciar modo de segurança.");
-        
+        slowestPrint("\nISSO É DE EXTREMA IMPORTÂNCIA, minha vida depende disso...");
+        Thread.sleep(2000);
+        slowestPrint("\n...");
+        Thread.sleep(2000);
+        slowestPrint("\npor algum motivo os monstros parecem estar impedidos de entrar aqui,");
+        Thread.sleep(3000);
+        slowestPrint(" hmmmmm, poxa espere ai.. você deve estar se perguntando o que está acontecendo né,");
+        Thread.sleep(2000);
+        slowestPrint(" masss.. fique tranquilo. Eu vou te explicar a situação.");
+        Thread.sleep(2000);
+        slowestPrint("\n[BOOOOOOOOM] - \"Barulho de explosão\"");
+        Thread.sleep(2000);
+        slowestPrint("\nMeu DEUSS ELES ESTÃO ENTRANDO AQUI, NÃO TEMOS MAIS TEMPO!");
+        Thread.sleep(2000);
+        slowestPrint("\nApenas obedeça esse sinal de socorro! POR FAVOR, MINHA VIDA ESTÁ EM SUAS MÃOS! NÃO PA###@(!$ .3´~<,12301101010000100000010001001000");
+        Thread.sleep(2000);
+        slowestPrint("\n\n[ERROR] \n\n");
+        Thread.sleep(2000);
+        slowestPrint("[end of transmition] \n\nDigite \"yes\" para iniciar modo de segurança.");
+
+
+
         String resposta = input.nextLine();
         if (resposta.equals("yes")) {
             
