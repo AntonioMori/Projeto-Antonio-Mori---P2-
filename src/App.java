@@ -107,15 +107,24 @@ public class App {
             //recebe o nome do usuário e o nome do robô
             String nomeInteiro = input.nextLine();
             String[] nomes = nomeInteiro.split(",");
+            
             // cria dois novos objetos referentes a cada nome recebido
             String nomeUser = nomes[0];
             String nomeRobo = nomes[1];
+            
+            //criação da entidade do robo
+            Entidade robo1 = new Entidade(nomeRobo,100,100,10,0,1);
 
+        
+            //implementação dos objetos tributos
+            // inicia a conversa com o usuário e explica o que são os tributos
             slowPrint("\nPrazer "+nomeUser+"! Seu robozinho se chamará "+nomeRobo+"!\n\nAgora vamos á construção!");
             Thread.sleep(1500);
             slowPrint("\nPorém antes de continuarmos devo lhe avisar de alguns detalhes importantes.");
             Thread.sleep(1500);
             slowPrint("\nO seu robozinho não é um robô comum, ele é um robô de guerra, os seus atributos serão definidos de acordo com as suas escolhas.");
+            Thread.sleep(1500);
+            slowPrint("\nAtualmente os seus tributos estão classificados como:\n"+ );
             Thread.sleep(1500);
             slowPrint("\nQual dos seguintes materiais será o material base do seu robo?\n[Aço] / [Ouro] / [Cobre] / [Plástico]");
             
