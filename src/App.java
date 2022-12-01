@@ -114,8 +114,8 @@ public class App {
             
             //criação da entidade do robo
             Entidade robo1 = new Entidade(nomeRobo,100,100,10,0,1);
-
-        
+            
+            
             //implementação dos objetos tributos
             // inicia a conversa com o usuário e explica o que são os tributos
             slowPrint("\nPrazer "+nomeUser+"! Seu robozinho se chamará "+nomeRobo+"!\n\nAgora vamos á construção!");
@@ -124,7 +124,7 @@ public class App {
             Thread.sleep(1500);
             slowPrint("\nO seu robozinho não é um robô comum, ele é um robô de guerra, os seus atributos serão definidos de acordo com as suas escolhas.");
             Thread.sleep(1500);
-            slowPrint("\nAtualmente os seus tributos estão classificados como:\n"+ );
+            slowPrint("\nAtualmente os seus tributos estão classificados como:\n[Nome:"+robo1.nome+"] / [Vida: "+robo1.vida+"] / [Defesa: "+robo1.defesa+"] / [Ataque: "+robo1.ataque+"] / [XP: "+robo1.xp+"] / [Nivel: "+robo1.nivel+"]");
             Thread.sleep(1500);
             slowPrint("\nQual dos seguintes materiais será o material base do seu robo?\n[Aço] / [Ouro] / [Cobre] / [Plástico]");
             
