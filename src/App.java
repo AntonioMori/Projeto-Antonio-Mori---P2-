@@ -74,16 +74,17 @@ public class App {
         Thread.sleep(2000);
         slowestPrint("\n\n[ERROR] \n\n");
         Thread.sleep(2000);
-        slowestPrint("[end of transmition] \n\nDigite \"yes\" para iniciar modo de segurança.");
+        slowestPrint("[end of transmition] \n\nDigite \"yes\" para iniciar modo de segurança.\n");
 
         // Variável que recebe a resposta do usuário, levando a um dos finais caso a resposta seja "yes" ou "no"
+        // Primeiro final caso seja não o cientista morre e o usuário perde 
 
         String resposta = input.nextLine();
 
         if (resposta.equals("yes")) {
             //se a resposta for sim:
 
-            slowestPrint("Modo de segurança sendo iniciado...");
+            slowestPrint("\nModo de segurança sendo iniciado...\n");
             Thread.sleep(1000);
             //Criação da variável fora do for para que ela não seja recriada a cada loop
             // início da tela de loading
@@ -102,7 +103,7 @@ public class App {
             
             Thread.sleep(2000);
             slowPrint("\n\nSeja bem vindo ao menu interativo! Eu irei auxiliar na construção do seu robo guerrilheiro, escolha as peças com sabedoria ou encare a derrota iminente.");
-            slowPrint("\nQual é o seu nome e o do seu robozinho? \"ps: separe os nomes atraves de uma vírgula\"");
+            slowPrint("\nPara começarmos qual é o seu nome e o do seu robo? \"ps: separe os nomes atraves de uma vírgula\"\n");
             //use a ferramenta split para separar usando uma virgula , leia  a linha inteira usando nextLine e depois use o split
             //recebe o nome do usuário e o nome do robô
             String nomeInteiro = input.nextLine();
@@ -118,43 +119,37 @@ public class App {
             
             //implementação dos objetos tributos
             // inicia a conversa com o usuário e explica o que são os tributos
-            slowPrint("\nPrazer "+nomeUser+"! Seu robozinho se chamará "+nomeRobo+"!\n\nAgora vamos á construção!");
+            slowPrint("\nPrazer "+nomeUser+"! Seu robo se chamará "+nomeRobo+"!\n\nAgora vamos á construção!");
             Thread.sleep(1500);
             slowPrint("\nPorém antes de continuarmos devo lhe avisar de alguns detalhes importantes.");
             Thread.sleep(1500);
             slowPrint("\nO que está sendo construido não é um robô comum, ele é um robô de guerra, os seus atributos serão definidos de acordo com as suas escolhas.");
-            Thread.sleep(1500);
-
-
+            Thread.sleep(2500);
 
 
 
             //PAREI AQUI (CRIAR FUNÇÃO QUE RETORNA OS TRIBUTOS ATUALIZADOS TODA VEZ Q A FUNÇÃO FOR CHAMADA)
-            //TRAZER UM SEGUNDO FINAL GAME OVER PARA POSTAR A ATIVIDADE (if palha = game over)
-
-
             // REFAZER AQUI UMA FUNÇÃO PARA TRAZER OS TRIBUTOS ATUALIZADOS 
-            slowPrint("\nAtualmente os seus tributos estão classificados como:\n[Nome:"+robo1.nome+"] / [Vida: "+robo1.vida+"] / [Defesa: "+robo1.defesa+"] / [Ataque: "+robo1.ataque+"] / [XP: "+robo1.xp+"] / [Nivel: "+robo1.nivel+"]");
+
+            slowPrint("\nAtualmente os seus tributos estão classificados como:\n\n[Nome:"+robo1.nome+"] / [Vida: "+robo1.vida+"] / [Defesa: "+robo1.defesa+"] / [Ataque: "+robo1.ataque+"] / [XP: "+robo1.xp+"] / [Nivel: "+robo1.nivel+"]");
             Thread.sleep(1500);
             slowPrint("");
             Thread.sleep(1500);
-            // ADICIONAR OPÇÃO PALHA =  GAME OVER PARA A ATIVIDADE DE P2
-            slowPrint("\nQual dos seguintes materiais será o material base do seu robo?\n[Aço] / [Ouro] / [Cobre] / [Plástico]");
+            slowPrint("\n\nQual dos seguintes materiais será o material base do seu robo?\n\n[Aço] / [Ouro] / [Cobre] / [Plástico] / [Madeira]");
             
-
-
-
-
-
-
-
 
             //recebe a resposta do usuário sobre o tipo do robo
             String tipoRobo = input.nextLine();
-            while(!tipoRobo.equalsIgnoreCase("Aço") && !tipoRobo.equalsIgnoreCase("Ouro") && !tipoRobo.equalsIgnoreCase("Cobre") && !tipoRobo.equalsIgnoreCase("Plástico")){
+
+            //condicional para repetir as perguntas caso seja digitada uma opção inválida
+            while(!tipoRobo.equalsIgnoreCase("Aço") && !tipoRobo.equalsIgnoreCase("Ouro") && !tipoRobo.equalsIgnoreCase("Cobre") && !tipoRobo.equalsIgnoreCase("Plástico") && !tipoRobo.equalsIgnoreCase("Madeira")){
                 System.out.println("Você digitou algo errado, tente novamente!\nVocê deseja que ele seja feito de qual material?\n[Aço] / [Ouro] / [Cobre] / [Plástico]");
                 tipoRobo = input.nextLine();
             }
+
+                                              ///Falta incrementar o que vai aumentar em seu status de acordo com as escolhas
+                                              ///Falta adicionar uma descrição para cada material
+                                              ///continuação das próximas escolhas a seguir, e continuação da história
             if (tipoRobo.equalsIgnoreCase("Aço")){
                 slowPrint("\nVocê escolheu o material Aço, ele é muito resistente e durável, mas é muito pesado, o que pode atrapalhar na mobilidade do seu robozinho.");
             }
@@ -167,7 +162,12 @@ public class App {
             else if (tipoRobo.equalsIgnoreCase("Plástico")){
                 slowPrint("\nVocê escolheu o material Plástico, ele é muito resistente e durável, mas é muito pesado, o que pode atrapalhar na mobilidade do seu robozinho.");
             }
+            else if (tipoRobo.equalsIgnoreCase("Madeira")){
+                slowPrint("\nVocê escolheu o materil mais inútil e ele pegou fogo durante o processo de montagem.");
+                slowestPrint("\nO robo não foi construido no tempo devido. O cientista e sua familia morreram.");
+                slowestPrint("\n\n[GAME OVER]");
             
+            }
             
             //equals ignore case
             
