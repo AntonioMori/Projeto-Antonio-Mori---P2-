@@ -1,5 +1,5 @@
 import java.util.Scanner;
-import java.util.concurrent.TimeUnit;
+
 
 public class testes {
     
@@ -25,8 +25,7 @@ public class testes {
          
             System.out.println("Seja bem vindo á parte fácil! A construção do seu guerreiro, escolha as peças com sabedoria ou encare a derrota iminente.");
             System.out.println("Qual é o seu nome e o do seu robozinho? \"ps: separe os nomes atraves de uma vírgula\"");
-
-
-
-    
-}}}
+        }//if
+        input.close();
+                }//string
+                        }//class

@@ -122,7 +122,7 @@ public class App {
             Thread.sleep(1500);
             slowPrint("\nPorém antes de continuarmos devo lhe avisar de alguns detalhes importantes.");
             Thread.sleep(1500);
-            slowPrint("\nO seu robozinho não é um robô comum, ele é um robô de guerra, os seus atributos serão definidos de acordo com as suas escolhas.");
+            slowPrint("\nO que está sendo construido não é um robô comum, ele é um robô de guerra, os seus atributos serão definidos de acordo com as suas escolhas.");
             Thread.sleep(1500);
 
 
@@ -136,7 +136,8 @@ public class App {
             // REFAZER AQUI UMA FUNÇÃO PARA TRAZER OS TRIBUTOS ATUALIZADOS 
             slowPrint("\nAtualmente os seus tributos estão classificados como:\n[Nome:"+robo1.nome+"] / [Vida: "+robo1.vida+"] / [Defesa: "+robo1.defesa+"] / [Ataque: "+robo1.ataque+"] / [XP: "+robo1.xp+"] / [Nivel: "+robo1.nivel+"]");
             Thread.sleep(1500);
-
+            slowPrint("");
+            Thread.sleep(1500);
             // ADICIONAR OPÇÃO PALHA =  GAME OVER PARA A ATIVIDADE DE P2
             slowPrint("\nQual dos seguintes materiais será o material base do seu robo?\n[Aço] / [Ouro] / [Cobre] / [Plástico]");
             
@@ -192,7 +193,8 @@ public class App {
         }
         
         
+        input.close();   
         
-       
     }
+    
 }
