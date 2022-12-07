@@ -25,9 +25,9 @@ public class Entidade {
     }
 
     //criado como uma função para trazer o status da entidade atualizados!
-    public static String mostrarStatusRobo(Entidade entidade) {
+    public String mostrarStatus() {
 
-        return("[Nome:"+entidade.nome+"] / [Vida: "+entidade.vida+"] / [Defesa: "+entidade.defesa+"] / [Ataque: "+entidade.ataque+"] / [XP: "+entidade.xp+"] / [Nivel: "+entidade.nivel+"]");
+        return("[Nome:"+this.nome+"] / [Vida: "+this.vida+"] / [Defesa: "+this.defesa+"] / [Ataque: "+this.ataque+"] / [XP: "+this.xp+"] / [Nivel: "+this.nivel+"]");
 
     }
 
