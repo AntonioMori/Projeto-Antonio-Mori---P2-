@@ -23,6 +23,12 @@ public class Entidade {
         this.xp = xp;
         this.nivel = nivel;
     }
+    public void Entidade2(String nome, int vida, int xp, int nivel) {
+        this.nome = nome;
+        this.vida = vida;
+        this.xp = xp;
+        this.nivel = nivel;
+    }
 
     //criado como uma função para trazer o status da entidade atualizados!
     public String mostrarStatus() {
@@ -32,8 +38,20 @@ public class Entidade {
     }
 
     //getters
+    
+    public String getNome() {return nome;}
+    public int getVida() {return vida;}
+    public int getDefesa() {return defesa;}
+    public int getAtaque() {return ataque;}
+    public int getXp() {return xp;}
+    public int getNivel() {return nivel;}
+
     //setters 
-    public void setVida(int vida) {
-        this.vida = vida;
-    } 
+    public void setVida(int vida) {this.vida = vida;} 
+    public void setNome(String nome){this.nome = nome;}
+    public void setDefesa(int defesa){this.defesa = defesa;}
+    public void setAtaque(int ataque){this.ataque = ataque;}
+    public void setXp(int xp){this.xp = xp;}
+    public void setNivel(int nivel){this.nivel = nivel;}
+
 }
