@@ -24,6 +24,13 @@ public class Entidade {
         this.nivel = nivel;
     }
 
+    //criado como uma função para trazer o status da entidade atualizados!
+    public static String mostrarStatusRobo(Entidade entidade) {
+
+        return("[Nome:"+entidade.nome+"] / [Vida: "+entidade.vida+"] / [Defesa: "+entidade.defesa+"] / [Ataque: "+entidade.ataque+"] / [XP: "+entidade.xp+"] / [Nivel: "+entidade.nivel+"]");
+
+    }
+
     //getters
     //setters 
     public void setVida(int vida) {

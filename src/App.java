@@ -134,54 +134,54 @@ public class App {
             //PAREI AQUI (CRIAR FUNÇÃO QUE RETORNA OS TRIBUTOS ATUALIZADOS TODA VEZ Q A FUNÇÃO FOR CHAMADA)
             // REFAZER AQUI UMA FUNÇÃO PARA TRAZER OS TRIBUTOS ATUALIZADOS 
 
-            slowPrint("\nAtualmente os seus tributos estão classificados como:\n\n[Nome:"+robo1.nome+"] / [Vida: "+robo1.vida+"] / [Defesa: "+robo1.defesa+"] / [Ataque: "+robo1.ataque+"] / [XP: "+robo1.xp+"] / [Nivel: "+robo1.nivel+"]");
-            Thread.sleep(1500);
-            slowPrint("");
-            Thread.sleep(1500);
+            
+            slowPrint("\nAtualmente os seus tributos estão classificados como:\n\n"+ Entidade.mostrarStatusRobo(robo1));
+            Thread.sleep(1500);            
             slowPrint("\n\nQual dos seguintes materiais será a base para a construção do seu robo?\n\n[Aço] / [Ouro] / [Cobre] / [Plástico] / [Madeira]\n");
             
 
             //recebe a resposta do usuário sobre o tipo do robo
             String tipoRobo = input.nextLine();
-
-            //condicional para repetir as perguntas caso seja digitada uma opção inválida
-            while( tipoRobo !="Aço" || tipoRobo !="Ouro" || tipoRobo !="Cobre" || tipoRobo !="Plástico"){
-                System.out.println("\nVocê digitou algo errado, tente novamente!\nVocê deseja que ele seja feito de qual material?\n[Aço] / [Ouro] / [Cobre] / [Plástico]\n");
-                tipoRobo = input.nextLine();
-            }
+            
 
                                           ///Falta incrementar o que vai aumentar em seu status de acordo com as escolhas
                                           ///Falta adicionar uma descrição para cada material
                                           ///continuação das próximas escolhas a seguir, e continuação da história
             
-            if (tipoRobo.equalsIgnoreCase("Aço")){
+        if (tipoRobo.equalsIgnoreCase("Aço")){
                 slowPrint("\nVocê escolheu o material Aço, ele é muito resistente e durável, mas é muito pesado, o que pode atrapalhar na mobilidade do seu robozinho.");
             robo1.ataque += 5;
             System.out.println(robo1.ataque);
             }
-            else if (tipoRobo.equalsIgnoreCase("Ouro")){
+        else if (tipoRobo.equalsIgnoreCase("Ouro")){
                 slowPrint("\nVocê escolheu o material Ouro, ele Não é tão resistente assim, mas deixa o seu robo lindo e brilhante, o que pode atrapalhar na mobilidade do seu robozinho.");
             }
-            else if (tipoRobo.equalsIgnoreCase("Cobre")){
+        else if (tipoRobo.equalsIgnoreCase("Cobre")){
                 slowPrint("\nVocê escolheu o material Cobre, ele é muito resistente e durável, mas é muito pesado, o que pode atrapalhar na mobilidade do seu robozinho.");
             }
-            else if (tipoRobo.equalsIgnoreCase("Plástico")){
+        else if (tipoRobo.equalsIgnoreCase("Plástico")){
                 slowPrint("\nVocê escolheu o material Plástico, ele é muito resistente e durável, mas é muito pesado, o que pode atrapalhar na mobilidade do seu robozinho.");
                
 
-             int vd = random.nextInt(10+50);
+             int vida1 = random.nextInt(10+50);
             
-                robo1.setVida(vd);
+                robo1.setVida(vida1);
             }
-            else if (tipoRobo.equalsIgnoreCase("Madeira")){
+        else if (tipoRobo.equalsIgnoreCase("Madeira")){
                 slowPrint("\nVocê escolheu o materil mais inútil e ele pegou fogo durante o processo de montagem.");
                 slowestPrint("\nO robo não foi construido no tempo devido. O cientista e sua familia morreram.");
                 slowestPrint("\n\n[GAME OVER]");
-            
             }
-            
+              //condicional para repetir as perguntas caso seja digitada uma opção inválida
+        else{ 
+            System.out.println("\nVocê digitou algo errado, tente novamente!\nVocê deseja que ele seja feito de qual material?\n[Aço] / [Ouro] / [Cobre] / [Plástico]\n");
+            tipoRobo = input.nextLine();
+
+        }        
+
+
             //equals ignore case
-            
+            // cada morte vai ser um capitulo
         
         
         
