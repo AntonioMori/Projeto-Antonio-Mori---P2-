@@ -1,11 +1,18 @@
 import java.util.Scanner;
+import java.util.Random;
 
 
 public class testes {
     
     public static void main(String[] args) throws Exception {
     Scanner input = new Scanner(System.in);
+    Random random = new Random();
 
+    int a = random.nextInt(10+50);
+    System.out.println(a);
+
+
+    
     System.out.println("[end of transmition] \n\nDigite \"yes\" para iniciar modo de segurança.");
 
         // Variável que recebe a resposta do usuário

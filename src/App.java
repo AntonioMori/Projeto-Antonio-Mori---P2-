@@ -1,6 +1,6 @@
 import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
-
+import java.util.Random;
 public class App {
 
     // Aqui é um código que a cada letra ele vai escrevendo na tela com atraso personalizado, criando um efeito de delay
@@ -34,6 +34,9 @@ public class App {
 
         // Scanner definido como input(entrada)
         Scanner input = new Scanner(System.in);
+        Random random = new Random();
+
+        
 
         // Conversa introdutória com o usuário
         slowestPrint("[...S0S SIGNAL INCOMING...]\n");
@@ -81,7 +84,7 @@ public class App {
 
         String resposta = input.nextLine();
 
-        if (resposta.equals("yes")) {
+        if (resposta.equalsIgnoreCase("yes")) {
             //se a resposta for sim:
 
             slowestPrint("\nModo de segurança sendo iniciado...\n");
@@ -89,11 +92,11 @@ public class App {
             //Criação da variável fora do for para que ela não seja recriada a cada loop
             // início da tela de loading
             
-            int porcentagem = 5;
-            for (int i = 0; i < 20; i++) { 
+            int porcentagem = 0;
+            for (int i = 0; i < 11; i++) { 
                 System.out.println( porcentagem + "%");
                 Thread.sleep(500);
-                porcentagem += 5;
+                porcentagem += 10;
             }
                 
                 slowestPrint("\nModo de segurança iniciado com sucesso.");
@@ -103,6 +106,7 @@ public class App {
             
             Thread.sleep(2000);
             slowPrint("\n\nSeja bem vindo ao menu interativo! Eu irei auxiliar na construção do seu robo guerrilheiro, escolha as peças com sabedoria ou encare a derrota iminente.");
+            Thread.sleep(1000);
             slowPrint("\nPara começarmos qual é o seu nome e o do seu robo? \"ps: separe os nomes atraves de uma vírgula\"\n");
             //use a ferramenta split para separar usando uma virgula , leia  a linha inteira usando nextLine e depois use o split
             //recebe o nome do usuário e o nome do robô
@@ -127,7 +131,6 @@ public class App {
             Thread.sleep(2500);
 
 
-
             //PAREI AQUI (CRIAR FUNÇÃO QUE RETORNA OS TRIBUTOS ATUALIZADOS TODA VEZ Q A FUNÇÃO FOR CHAMADA)
             // REFAZER AQUI UMA FUNÇÃO PARA TRAZER OS TRIBUTOS ATUALIZADOS 
 
@@ -135,23 +138,26 @@ public class App {
             Thread.sleep(1500);
             slowPrint("");
             Thread.sleep(1500);
-            slowPrint("\n\nQual dos seguintes materiais será o material base do seu robo?\n\n[Aço] / [Ouro] / [Cobre] / [Plástico] / [Madeira]");
+            slowPrint("\n\nQual dos seguintes materiais será a base para a construção do seu robo?\n\n[Aço] / [Ouro] / [Cobre] / [Plástico] / [Madeira]\n");
             
 
             //recebe a resposta do usuário sobre o tipo do robo
             String tipoRobo = input.nextLine();
 
             //condicional para repetir as perguntas caso seja digitada uma opção inválida
-            while(!tipoRobo.equalsIgnoreCase("Aço") && !tipoRobo.equalsIgnoreCase("Ouro") && !tipoRobo.equalsIgnoreCase("Cobre") && !tipoRobo.equalsIgnoreCase("Plástico") && !tipoRobo.equalsIgnoreCase("Madeira")){
-                System.out.println("Você digitou algo errado, tente novamente!\nVocê deseja que ele seja feito de qual material?\n[Aço] / [Ouro] / [Cobre] / [Plástico]");
+            while( tipoRobo !="Aço" || tipoRobo !="Ouro" || tipoRobo !="Cobre" || tipoRobo !="Plástico"){
+                System.out.println("\nVocê digitou algo errado, tente novamente!\nVocê deseja que ele seja feito de qual material?\n[Aço] / [Ouro] / [Cobre] / [Plástico]\n");
                 tipoRobo = input.nextLine();
             }
 
-                                              ///Falta incrementar o que vai aumentar em seu status de acordo com as escolhas
-                                              ///Falta adicionar uma descrição para cada material
-                                              ///continuação das próximas escolhas a seguir, e continuação da história
+                                          ///Falta incrementar o que vai aumentar em seu status de acordo com as escolhas
+                                          ///Falta adicionar uma descrição para cada material
+                                          ///continuação das próximas escolhas a seguir, e continuação da história
+            
             if (tipoRobo.equalsIgnoreCase("Aço")){
                 slowPrint("\nVocê escolheu o material Aço, ele é muito resistente e durável, mas é muito pesado, o que pode atrapalhar na mobilidade do seu robozinho.");
+            robo1.ataque += 5;
+            System.out.println(robo1.ataque);
             }
             else if (tipoRobo.equalsIgnoreCase("Ouro")){
                 slowPrint("\nVocê escolheu o material Ouro, ele Não é tão resistente assim, mas deixa o seu robo lindo e brilhante, o que pode atrapalhar na mobilidade do seu robozinho.");
@@ -161,6 +167,11 @@ public class App {
             }
             else if (tipoRobo.equalsIgnoreCase("Plástico")){
                 slowPrint("\nVocê escolheu o material Plástico, ele é muito resistente e durável, mas é muito pesado, o que pode atrapalhar na mobilidade do seu robozinho.");
+               
+
+             int vd = random.nextInt(10+50);
+            
+                robo1.setVida(vd);
             }
             else if (tipoRobo.equalsIgnoreCase("Madeira")){
                 slowPrint("\nVocê escolheu o materil mais inútil e ele pegou fogo durante o processo de montagem.");

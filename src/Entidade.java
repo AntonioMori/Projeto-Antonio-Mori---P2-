@@ -1,3 +1,4 @@
+
 public class Entidade {
     String nome;
     int vida;
@@ -22,4 +23,10 @@ public class Entidade {
         this.xp = xp;
         this.nivel = nivel;
     }
+
+    //getters
+    //setters 
+    public void setVida(int vida) {
+        this.vida = vida;
+    } 
 }
